@@ -1,0 +1,7 @@
+git
+openssh-clients
+tmux
+htop
+alacritty
+chezmoi
+distrobox
