@@ -2,7 +2,7 @@
 set -e
 
 echo "Removing default Firefox RPM..."
-sudo rpm-ostree override remove firefox
+sudo rpm-ostree override remove firefox firefox-langpacks
 
 echo "Installing layered packages..."
 sudo rpm-ostree install \
