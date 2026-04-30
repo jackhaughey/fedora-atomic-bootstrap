@@ -29,4 +29,4 @@ chmod +x ~/.local/bin/devpod
 echo "All Flatpak applications installed successfully."
 
 echo "Running mise installer..."
-./install-mise.sh
+sh ./install-mise.sh
