@@ -19,5 +19,12 @@ flatpak install -y flathub org.videolan.VLC
 echo "Installing Obsidian..."
 flatpak install -y flathub md.obsidian.Obsidian
 
+echo "Installing DevPod..."
+mkdir -p ~/.local/bin
+curl -L \
+  https://github.com/loft-sh/devpod/releases/latest/download/devpod-linux-amd64 \
+  -o ~/.local/bin/devpod
+chmod +x ~/.local/bin/devpod
+
 echo "All Flatpak applications installed successfully."
 
