@@ -7,7 +7,6 @@ sudo rpm-ostree override remove firefox firefox-langpacks
 echo "Installing layered packages..."
 sudo rpm-ostree install \
   git \
-  openssh-clients \
   tmux \
   htop \
   alacritty \
