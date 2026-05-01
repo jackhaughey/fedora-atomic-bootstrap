@@ -19,7 +19,11 @@ starship preset catppuccin-powerline -o ~/.config/starship.toml
 
 # Starship
 echo eval "$(starship init bash)" >> ~/.bashrc
-echo eval "$($HOME/.local/bin/mise activate bash)" >> ~/.bashrc
+
+# Add mise activation to ~/.bashrc if missing
+if ! grep -q 'mise activate bash' "$HOME/.bashrc" 2>/dev/null; then
+  echo 'eval "$($HOME/.local/bin/mise activate bash)"' >> "$HOME/.bashrc"
+fi
 
 echo "==> Rebooting to apply rpm-ostree changes"
 systemctl reboot
