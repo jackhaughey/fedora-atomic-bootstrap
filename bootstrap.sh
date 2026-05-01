@@ -14,7 +14,7 @@ sudo rpm-ostree install \
     distrobox
 
 echo "==> Installing Starship prompt"
-mkdir -p "$HOME/.config/bin"
+mkdir -p "$HOME/.local/bin"
 curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin
 starship preset catppuccin-powerline -o ~/.config/starship.toml
 
