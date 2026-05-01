@@ -17,5 +17,9 @@ echo "==> Installing Starship prompt"
 curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin
 starship preset catppuccin-powerline -o ~/.config/starship.toml
 
+# Starship
+echo eval "$(starship init bash)" >> ~/.bashrc
+echo eval "$($HOME/.local/bin/mise activate bash)" >> ~/.bashrc
+
 echo "==> Rebooting to apply rpm-ostree changes"
 systemctl reboot
