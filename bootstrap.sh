@@ -6,6 +6,7 @@ sudo rpm-ostree override remove firefox firefox-langpacks
 
 echo "==> Applying rpm-ostree package layering"
 sudo rpm-ostree install \
+    zsh \
     git \
     tmux \
     htop \
