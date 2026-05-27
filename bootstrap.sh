@@ -2,7 +2,7 @@
 set -euo pipefail
 
 echo "Removing default Firefox RPM..."
-sudo rpm-ostree override remove firefox firefox-langpacks
+# sudo rpm-ostree override remove firefox firefox-langpacks
 
 echo "==> Applying rpm-ostree package layering"
 sudo rpm-ostree install \
