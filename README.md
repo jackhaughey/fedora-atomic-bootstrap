@@ -18,11 +18,13 @@ It is designed to be paired with a dotfiles manager such as **chezmoi**, and to 
 ---
 
 ## Repository Structure
+```
 fedora-atomic-bootstrap/
 ├── bootstrap.sh
 ├── install-flatpaks.sh
 ├── packages.txt
 └── README.md
+```
 
 ### **[bootstrap.sh](ca://s?q=Explain_bootstrap_sh)**
 The main entrypoint. It:
