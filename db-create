@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+distrobox create \
+  --name cloud \
+  --image registry.fedoraproject.org/fedora:40 \
+  #--additional-packages tini \
+  #--init \
+  --home ~/.local/share/distrobox/cloud-home \
+  --volume ~/.ssh:/home/$USER/.ssh \
+  --volume ~/.kube:/home/$USER/.kube \
+  --volume ~/workspace:/workspace \
+  --yes
