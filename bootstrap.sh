@@ -5,26 +5,28 @@ echo "Removing default Firefox RPM..."
 # sudo rpm-ostree override remove firefox firefox-langpacks
 
 echo "==> Applying rpm-ostree package layering"
-sudo rpm-ostree install \
-    zsh \
-    tmux \
-    htop \
-    alacritty \
-    chezmoi \
-    distrobox
+#sudo rpm-ostree install \
+#    zsh \
+#    tmux \
+#    htop \
+    alacritty # \
+#    chezmoi \
+#    distrobox
 
-echo "==> Installing Starship prompt"
-mkdir -p "$HOME/.local/bin"
-curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin
+# echo "==> Installing Starship prompt"
+# mkdir -p "$HOME/.local/bin"
+# curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin
 # starship preset catppuccin-powerline -o ~/.config/starship.toml
 
 # Starship
-echo eval "$(starship init bash)" >> ~/.bashrc
+# echo eval "$(starship init bash)" >> ~/.bashrc
 
 # Add mise activation to ~/.bashrc if missing
-if ! grep -q 'mise activate bash' "$HOME/.bashrc" 2>/dev/null; then
-  echo 'eval "$($HOME/.local/bin/mise activate bash)"' >> "$HOME/.bashrc"
-fi
+# if ! grep -q 'mise activate bash' "$HOME/.bashrc" 2>/dev/null; then
+#   echo 'eval "$($HOME/.local/bin/mise activate bash)"' >> "$HOME/.bashrc"
+# fi
 
 echo "==> Rebooting to apply rpm-ostree changes"
 systemctl reboot
+
+# Script becoming irrelevant as now using Bluefin, which comes with most of these tools ready to install.
